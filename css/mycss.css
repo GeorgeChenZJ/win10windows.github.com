@@ -10,14 +10,16 @@ body{
     -moz-user-select:none;
     -ms-user-select:none;
     user-select:none;
+  background: url(../img/pic/desktop.jpg) no-repeat center;
+  background-size: 100% 100%;
 }
 .window {
   background-color: #515c6b;
   position: absolute;
   cursor: default;
-  -moz-box-shadow:2px 2px 5px #aeaeae;
-  -webkit-box-shadow:2px 2px 5px #aeaeae;
-  box-shadow: 0px 1px 13px 0px #aeaeae;
+  -moz-box-shadow:0px 1px 13px 0px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow:0px 1px 13px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.4);
   border: 1px solid #515c6b;
   min-width: 150px;
   min-height: 120px;
@@ -209,8 +211,8 @@ body{
   position: fixed;
   -moz-box-shadow: 0px 0px 20px 5px #b8b8b8;
   -webkit-box-shadow: 0px 0px 20px 5px #b8b8b8;
-  box-shadow: 0px 0px 20px 5px #b8b8b8;
-  border: 1px dotted #ffffff;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   visibility: hidden;
 }
 .window-animate.maximize-cover>.cover-inner{
@@ -220,5 +222,6 @@ body{
   opacity: 0.1;
   height: inherit;
   width: inherit;
-  background: #fffffa;
+  background: rgba(255, 255, 255, 0.4);
 }
+
