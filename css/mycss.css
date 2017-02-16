@@ -2,6 +2,7 @@
 html, body{
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 body{
   margin: 0 0;
@@ -12,6 +13,9 @@ body{
     user-select:none;
   background: url(../img/pic/desktop.jpg) no-repeat center;
   background-size: 100% 100%;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='img/pic/desktop.jpg',
+    sizingMethod='scale');
 }
 .window {
   background-color: #515c6b;
@@ -25,11 +29,11 @@ body{
   min-height: 120px;
 }
 .window>.content{
-  height: 271px;
   width: inherit;
   background-color: #fff;
   position: absolute;
   top: 29px;
+  bottom: 0;
   min-width: 150px;
   min-height: 90px;
 }
@@ -120,7 +124,6 @@ body{
   float: right;
   top: 0;
   right: 0;
-  width: 138px;
   z-index: 2;
 }
 .window>.btn-bar .btn{
@@ -150,6 +153,7 @@ body{
 }
 .window>.btn-bar .btn.btn-close>div{
   background: url(../img/icon/close.ico) no-repeat center;
+  background: url(../img/icon/close-sm.ico) no-repeat center\9;
   background-size: 13px 13px;
 }
 .window>.btn-bar .btn.btn-maximize>div{
@@ -172,6 +176,7 @@ body{
 }
 .window.unselected>.btn-bar .btn.btn-close>div{
   background: url(../img/icon/close-2.ico) no-repeat center;
+  background: url(../img/icon/close-sm2.ico) no-repeat center\9;
   background-size: 13px 13px;
 }
 .window.unselected>.btn-bar .btn.btn-maximize>div{
@@ -188,6 +193,7 @@ body{
 }
 .window.unselected>.btn-bar .btn.btn-close:hover>div{
   background: url(../img/icon/close.ico) no-repeat center;
+  background: url(../img/icon/close-sm.ico) no-repeat center\9;
   background-size: 13px 13px;
 }
 .window.unselected>.btn-bar .btn.btn-maximize:hover>div{
@@ -213,6 +219,7 @@ body{
   -webkit-box-shadow: 0px 0px 20px 5px #b8b8b8;
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid #333\9;
   visibility: hidden;
 }
 .window-animate.maximize-cover>.cover-inner{
@@ -223,5 +230,5 @@ body{
   height: inherit;
   width: inherit;
   background: rgba(255, 255, 255, 0.4);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#22888888,endColorstr=#22888888);
 }
-
