@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>windows</title>
+  <title>win</title>
   <link rel="shortcut icon" href="">
   <link href="css/mycss.css" rel="stylesheet">
 </head>
@@ -11,8 +11,8 @@
     <button onclick="addWin_n()">OPEN</button>
     <button onclick="reopenWin()" style="position: absolute;bottom: 0;">REOPEN</button>
   </div>
-<script src="js/win.js"></script>
-<script src="js/win-animate.js"></script>
+<script src="js/win2.js"></script>
+<script src="js/win-animate2.js"></script>
 <script>
   addWin_n()
   function addWin_n(){
@@ -53,7 +53,13 @@
         resetPosition();
       }
       i++;
-      _wins.push(new AnimateWin({id:"window_"+i, color:"#515c6b", top: top, left:left, width:width, height:height}))
+      _wins.push(new AnimateWin({id:"window_"+i, color:"#515c6b", top: top, left:left, width:width, height:height,
+        btnGroup: [1,1,1],
+        preClose: function(){
+          // alert("preClose")
+          return true;
+        }
+      }))
     }
     function resetPosition(){
       var r1 = Math.random(),
